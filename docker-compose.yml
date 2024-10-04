@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   redis:
     image: 'bitnami/redis:latest'
@@ -11,9 +9,6 @@ services:
   mongodb:
     image: mongo
     container_name: mongodb
-    environment:
-      - PUID=1000
-      - PGID=1000
     ports:
       - 27017:27017
     restart: unless-stopped
